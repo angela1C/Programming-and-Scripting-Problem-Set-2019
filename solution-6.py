@@ -39,6 +39,7 @@ str.join str.join(iterable) Return a string which is the concatenation of the st
 """ 
 
 print(words[::2])  ## this is printing every second word but as a list
+## using slicing to go from the beginning to the end of the string, and specifying the step of 2 to get every second word.
 other_word = words[::2]  ## assign to a variable other_word
 print(type(other_word))  # this shows it is a list
 
