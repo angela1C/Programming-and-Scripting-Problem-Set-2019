@@ -36,6 +36,9 @@ import datetime as dt
 # assign the result to variable `now`
 now =  dt.datetime.now()
 
+## datetime objects support a `strftime(format)` to create a string representing the time
+## according to a format string that is explicitly specified `date.strftime(format)`
+#https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
 
 print(now.strftime("%A, %B %d %Y at %I:%M%p"))
 """
@@ -77,3 +80,5 @@ print(now.strftime("%A, %B %d")+suf, now.strftime("%Y at %I:%M%p"))
 print(now.strftime("%I:%M%p").lower())
 print(now.strftime("%A, %B %d")+suf, now.strftime("%Y at %I:%M%p").lower())
 ## result!! come back tomorrow and tidy it up
+
+
