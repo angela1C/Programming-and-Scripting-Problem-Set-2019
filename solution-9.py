@@ -51,10 +51,9 @@ with open("moby-dick.txt","r") as f:
 Next the question asks for every second line to be output
 I need to find out if there is a skipline function. 
 """
-# how to know how big the file is. 
-# I could create a variable to count each line as it is read
-# I tried indexing but this does not seem the be allowed
-# to get every second line, I could try printing every even line number
+# first create a line number variable to give a line number to each line
+# To find every second line, I could try printing every even line number
+# I can use the modulus operator to see if a line number is even
 
 
 ## open the file creating file object f
@@ -110,8 +109,7 @@ with open("my_testfile.txt","r") as f:
         
 ## I am sure there is a better way of doing this. I will come back to this and see if I can improve it
 # But for now I will save this.
-
-## I think I need to put it into a function in order to answer the question asked. 
+ 
 # The program should take the filename from an argument on the command line
 # come back to write the function 
 ## Referring to the Python Tutorial section 4.6 Defining Functions
@@ -134,7 +132,19 @@ def second(textfile):
             ## if the line_no is evem (using modulus operator)
             if (line_no % 2) ==0:
                 ### print the even lines
-            print(l)
+                print(l)
 
 # I have copied my function into a separate python script second.py
-# it is not finised but I will leawe it for tonight.
+# it is not finished but I will leave it for tonight.
+
+## from the problem set: The program should take the filename from an argument on the command line.
+# As it is, my program 
+"""
+Looking down through the Table of Contents on the Python tutorial 
+[Section 10.3 Command Line Arguments](https://docs.python.org/3.3/tutorial/stdlib.html#command-line-arguments)
+16.4 argparse — Parser for command-line options, arguments and sub-commands
+at https://docs.python.org/3.3/library/argparse.html
+that 
+"""
+import sys
+print(sys.argv)
