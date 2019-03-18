@@ -1,48 +1,49 @@
 """
+This program asks the user input a string and it will output every second word.
+
+This program contains my code for the sixth problem on the Problem Set 2019:
 Write a program that takes a user input string and outputs every second word.
 $ python secondstring.py
+
 Example of running the program
 Please enter a sentence: The quick brown fox jumps over the lazy dog.
 The brown jumps the dog
+---------------------------------------
 
-This question is looking at string functions. 
-For this question I am referring to the section on string methods on the python standard library at https://docs.python.org/3/library/stdtypes.html#string-methods 
-It was also covered in week 7 of the course
-str.split() function splits a string up into words. By default str.split splits on white space and returns a list.
+Take a string input by the user.
+Split the string into words. 
+A word is one or more characters separated by a space.
+Go through the list of words but only print every second one.
 
-`str.split(sep=None, maxsplit=-1)` will return a list of the words in the string, using sep as the delimiter string.`
+My sources for working on this problem are as follows:
+[Section 3.1.2 of The Python Tutorial](https://docs.python.org/3/tutorial/introduction.html#strings)
 
-The opposite to split is join. str.join returns a string back while split returns a list.
+[The section on String Methods in the Python Standard Library](https://docs.python.org/3/library/stdtypes.html#string-methods)
+In particular:
+[str.split()](https://docs.python.org/3/library/stdtypes.html#str.split) and [str.join](https://docs.python.org/3/library/stdtypes.html#str.join)
 """
-## this program asks a user to type in a sentence. This will be assigned to the variable 'sentence'
-sentence= str(input("Please enter a sentence: "))  ## asks the user to type in a sentence
+# This code asks a user to type in a sentence. The `str()` function converts the input into a string.
+# This will be assigned to the variable 'sentence'. 
 
-words = sentence.split()  ## split the sentence into words using the default white space as the separator.
+sentence= str(input("Please enter a sentence: "))
 
-print(len(words))  ## can use len to count how many words in the sentence
-num_words = len(words)  ## assign this to variable num_words
-print("There are ",num_words, "words in that sentence")  ## just for now
-for i in range(0,num_words,2):  ## using a for loop to go through each word starting at zero and using a step size of 2
-    print(words[i])  ## print every second word 
+# using the .split() string method to split the sentence into words using the default white space as the delimiter.
+# assign the output to words. `str.split()` returns a list
+words = sentence.split()  
+# Count how many words in the sentence using `len()` function. Assign it to the variable num_words
+num_words = len(words)  
 
 """
-##This seems to be given the required output however it is printing each word to a new row on a separate line.
-In week 7 we looked at slicing strings. The step argument can be specified
-If I set it to 2 then it will take every second word.
-However when it prints out it is including the square brackets of the list as str.split returns a list
+# Using a for loop to iterate over the indices of each word in the sentence using the `range()` and `len()` function combined
+# Range from zero up the number of words in the sentence, in steps of 2 to get the index for every second word.
+# This prints every second word but it puts them on a separate line instead of beside each other.
 
-The opposite to str.split is str.join.
-
-From https://docs.python.org/3/library/stdtypes.html#lists section on String Methods
-str.join str.join(iterable) Return a string which is the concatenation of the strings in iterable. 
-
-""" 
-
-print(words[::2])  ## this is printing every second word but as a list
-## using slicing to go from the beginning to the end of the string, and specifying the step of 2 to get every second word.
-other_word = words[::2]  ## assign to a variable other_word
-print(type(other_word))  # this shows it is a list
-
-print (" ".join(other_word))  ## now using str.join to join white space with every second word.
-# str.join returns a string
+for i in range(0,len(words),2):
+    print(words[i])  
+ """  
+# Here I am using indexing to go through each word in words starting from the first word, ending at the last word, using a step size of 2 
+# to  get every second word and assign them to other_word
+other_word = words[::2] 
+# Print the string formed by using the `str.join()` method to concatenate every second word in other_word with whitespace. 
+print (" ".join(other_word))  
 
