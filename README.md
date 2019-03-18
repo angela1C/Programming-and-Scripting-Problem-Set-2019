@@ -79,3 +79,15 @@ This program contains my code for the fifth problem on the problem set.
 To run this program, go to the command line and enter the following command:
 $ python solution-5.py
 The program will ask the user to input a postive integer. The program will output a message saying if the number is prime or not.
+
+## Solution-6.py
+
+This program contains my code for the sixth problem on the problem set.
+
+6. Write a program that takes a user input string and outputs every second word.
+
+To run this program, go to the command line and enter the following command:
+$ python solution-6.py
+
+The program will ask the user to enter a sentence. 
+The program will output every second word
