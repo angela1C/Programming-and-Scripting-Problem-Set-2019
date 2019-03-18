@@ -70,3 +70,12 @@ The program outputs a sequence of numbers starting with that number as the first
 calculated from the previous terms by halving the previous term if it was even, or by multiplying the previous term by 3 and adding 1 to this product.
 The last number in the sequence is 1
 
+## Solution-5.py
+
+This program contains my code for the fifth problem on the problem set.
+
+5. Write a program that asks the user to input a positive integer and tells the user whether or not the number is a prime.
+
+To run this program, go to the command line and enter the following command:
+$ python solution-5.py
+The program will ask the user to input a postive integer. The program will output a message saying if the number is prime or not.
