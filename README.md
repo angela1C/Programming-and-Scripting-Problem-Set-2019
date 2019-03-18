@@ -44,7 +44,7 @@ The program does not require any input from the user.
 The program will output a message saying if today begins with a T or not.
 "Yes - Today begins with a T" or "No - today does not begin with a T"
 
-## Solution-3 .py
+## Solution-3.py
 
 This program contains my code for the third problem on the problem set.
 3. Write a program that prints all numbers between 1,000 and 10,000 that are divisible by 6 but not 12.
@@ -54,3 +54,19 @@ $ python solution-3.py
 
 The program does not require any input from the user.
 The program will print all the numbers betweem 1,000 and 10,000 that are divisible by 6 but are not divisible by 12. Any numbers between 1,000 and 10,000 that are divisible by both 6 and 12 are not printed
+
+## Solution-4.py
+
+This program contains my code for the fourth problem on the problem set.
+
+4. Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. 
+At each step calculate the next value by taking the current value and,if it is even, divide it by two, but if it is odd, multiply it by three and add one. 
+Have the program end if the current value is one.
+
+To run this program, go to the command line and enter the following command:
+$ python solution-4.py
+The program will ask the user to input a postive integer.
+The program outputs a sequence of numbers starting with that number as the first term. The rest of the terms are 
+calculated from the previous terms by halving the previous term if it was even, or by multiplying the previous term by 3 and adding 1 to this product.
+The last number in the sequence is 1
+
