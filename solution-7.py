@@ -1,4 +1,7 @@
 """
+This program ...
+
+This program contains my code for the seventh problem on the Problem Set 2019:
 Write a program that that takes a positive floating point number as input and outputs an approximation of its square root.
 
 Example of running this program is:
