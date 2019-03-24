@@ -1,59 +1,77 @@
 """
-This program ...
+# Solution to Problem 7 on the Problem Set 2019
+# Angela Carpenter
+# 23 March 2019
 
 This program contains my code for the seventh problem on the Problem Set 2019:
-Write a program that that takes a positive floating point number as input and outputs an approximation of its square root.
+This program asks the user to input a positive floating point number. It then outputs an approximation of its square root.
 
-Example of running this program is:
-$ python squareroot.py
-Please enter a positive number: 14.5
-The square root of 14.5 is approx. 3.8.
+There is a python function for calculating square roots in the maths module which is part of the Python Standard Library.
+Newtons Method can also be used to get an estimate of the square root of a number.
 
+My references for this program are:
+
+https://docs.python.org/3/library/math.html?highlight=math#module-math for the  sqrt function in the math module.
+
+https://en.wikipedia.org/wiki/Newton%27s_method
+https://math.stackexchange.com/questions/350740/why-does-newtons-method-work
+https://mathinsight.org/newtons_method_refresher
+
+https://tour.golang.org/flowcontrol/8  
+for an explanation of how to use Newtons Method to get the square root of a number
+
+https://docs.python.org/3/library/functions.html#format  for the format function
+Python has a format function to convert a value to a “formatted” representation, as controlled by format_spec.
+https://stackoverflow.com/a/1598650 for an example of using the format function with keyword arguments
 """
-## here I set-up a variable 'my_float' to hold the input from the user
-my_float = float(input("Please enter a positive floating point number: "))
-my_square_root = 0 # set up a variable to hold result
+# If the input is not a positive float then the user will be asked again and again until a valid positive integer is entered.
+while True:
+    ## while True, execute the `try` statements. 
+    try:
+        x = float(input("Please enter a positive floating point number: ")) 
+        if x < 0:
+            ## raise a ValueError if the input is a negative number. 
+           raise ValueError
+         # break out of the loop to stop asking user for input.
+        break  
+    ## if an exception does occur within the try clause, then skip the rest of the try statements print exception statement.
+    except ValueError:
+        print("That was not a positive floating point number. Please try again")
 
-### promt the user to enter a positive float if a negative one is entered
-if my_float < 0:
-    print("Please enter a positive floating point number")
-elif my_float > 0:
-    print("You have entered: ",my_float) 
+# assign the user's input to rootof
+rootof= x
+# The intial estimate for the square root. This can be any number to start the loop going
+estimate  = 10
+# count the number of times the loop has to go through to get the square root
+iters = 0
+# Keep going until the square of estimate is within 0.01 of rootof
 
- ## There is an existing maths function called sqrt in the math module
- #  For now I will use this. I'm not sure if I am meant to work it out myself!
+ # Using Newtons Method, whatever the starting estimate, once the square of the estimate gets close enough (0.01 here)
+ # to the number itself, that is a good approximation for the square root. 
 
-import math  ## import the math module
-my_square_root = math.sqrt(my_float)
+# while loop to keep changing the estimate until it is close enough. Once it is within 0.01 stops
+# inner for loop is just to see how many loops it has to do to find the square root
+for i in range(1,estimate):
+    # while the absolute difference between the estimate squared and the number in question is greater than 0.01
+    # This is using Newtons Method to improve our estimate adapted from  https://tour.golang.org/flowcomtrol/8
+    while abs((estimate * estimate) - rootof )> 0.01:
+        # updates the estimate to the new estimate 
+        estimate -=((estimate * estimate)-rootof)/(2 * estimate)
+        # printing just for interest to see how many loops it actually takes to get the square root
+        print(f"On iteration {iters} of the loop, the square root estimate of {rootof} is {estimate}.")
+        # increase the number of iterations by 1 every time it goes around the while loop
+        iters += 1
+    # the square root is the final value of estimate from the loop above 
+    sqroot = estimate    
+    
+    print(f"Using Newtons Method, and a starting estimate of {i}, the square root of {rootof} is approx. {estimate}.")
+    # break here as no need to continue with the for loop once the while loop has evaluated to false.
+    # when the estimate for the square root is within 0.01 above
+    break
 
-## the sample output in the problem set suggest that we should only return an approximation of the square root
-#Here I will round the result of the math.sqrt function
-print("The square root of",my_float, "is ",round(math.sqrt(my_float),1))
+print(f"Using Newtons Method, a starting guess of {i}, it took {iters} loops to find the square root of {rootof} which is approx. {estimate}.")
 
-## I think there is another way of specifying the number of decimal places by using the format function.
+import math
+print(f"Using math.sqrt function, the square root of {x} is approx. {math.sqrt(x)}.")
 
-""" from the python docs section on floats at https://docs.python.org/3/library/functions.html#float
-format(value[, format_spec])
-Convert a value to a “formatted” representation, as controlled by format_spec. 
-The interpretation of format_spec will depend on the type of the value argument,
- however there is a standard formatting syntax that is used by most built-in types:
-  Format Specification Mini-Language.
-
-I found an example of how this is used for floats on stack.overflow which gives an example of how this works at
-https://stackoverflow.com/questions/1598579/rounding-decimals-with-new-python-format-function
-
-
-# {number:.{digits}f}'.format(number=my_square_root, digits=1))
-# the nested {digits}  here takes the value of the second argument which is 1 (digits=1) and applies it to the 
-precision part of the format
-"""
-print('{0:.{1}f}'.format(math.sqrt(my_float),1))  ## here the square root of the number is the first argument and the number (argument 0)
-# and the number of digits after the decimal point is 1 corresponding to the second argument (argument 1)
-
-## To make this more readable, the post suggests using argument names and passing the corresponding values as keywords arguments to format
-print("The square root of ",my_float," is",'{number:.{digits}f}'.format(number=my_square_root, digits=1))
-
-
-
-
-
+print(f"The square root of {x} is approx.", '{number:.{digits}f}'.format(number=sqroot, digits=1))
