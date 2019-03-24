@@ -1,5 +1,12 @@
 # Problems sets solutions
 
+## COME BACK TO TIDY UP AND FINISH OFF!.
+1. remove extra print statements or extra statements used for testing
+2. remove test files and scripts
+3. revisit solution-4.py to get output on a single line
+4. and solution-9.py to deal with invalid files
+
+
 (For now I am just following the format that Ian went through on the Skype call)
 
 This repository contains my solutions to the Problem Set 2019 for the module Programming and Scripting at GMIT as part of the Higher Diploma in Computing and Data Analytics.
@@ -11,6 +18,8 @@ This repository contains my solutions to the Problem Set 2019 for the module Pro
 2. Click the download button
 
 ## How to run the code
+Below are the instructions for running each program.
+
 
 
 ## What each file contains
@@ -91,3 +100,44 @@ $ python solution-6.py
 
 The program will ask the user to enter a sentence. 
 The program will output every second word
+
+## Solution-7.py
+
+This program contains my code for the seventh problem on the problem set.
+
+To run this program, go to the command line and enter the following command:
+$python solution-7.py
+
+The program will ask the user to enter a positive floating point number.
+The program will output the approximate square root of the number.
+
+
+
+## Solution-8.py
+This program contains my code for the eight problem on the problem set.
+
+This program outputs today's date and time in a the format "Monday, January 10th 2019 at 1:15pm”
+
+To run this program, go to the command line and enter the following command:
+$ python solution-8.py
+
+## Solution-9.py
+This program contains my code for the ninth problem on the problem set.
+This program reads in a text file and outputs every second line. 
+The program takes the filename from an argument on the command line
+
+To run this program, go to the command line and enter the following command:
+$ python solution-9.py `<file.txt>`
+
+
+## Solution-10.py
+
+This program contains my code for the tenth problem on the problem set.
+
+10. Write a program that displays a plot of the functions x, x^2 and 2^x in the range[0,4]
+
+To run this program, go to the command line and enter the following command:
+$ python solution-10.py
+
+The program will generate the plot of the three functions. 
+Note to return to the command line you must first close out of the resulting plot. 

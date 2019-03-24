@@ -1,150 +1,95 @@
 """
-This script is my solution to Problem 9 of the Problem Set 2019
-Write a program that reads in a text file and outputs every second line. The program should take the filename from an argument on the command line.
+# Solution to Problem 9 on the Problem Set 2019
+# Angela Carpenter
+# 24th March 2019
 
-sample program output:
-$ python second.py moby-dick.txt
-Title:  Moby Dick; or The Whale
-CHAPTER 1
-Call me Ishmael.  Some years ago--never mind how long
-particular to interest me on shore, I thought I would sail about a
-...
+This program reads in a text file and outputs every second line. 
+The program takes the filename of the text file from an argument on the command line.
+If the user has not entered a .txt file on the command prompt then they are asked to enter one
+This is then used as the file to process.
 
-For this I will refer to Section 7.2 Reading and Writing Files of the Python Tutorial at https://docs.python.org/3/tutorial/inputoutput.html
-The program needs to read in a text file.
-Output every second line. I presume starting from the very first line and then skipping every second line.
-The program should not cause any changes to the text file it is reading from
-It is to take the filename from an argument on the command line.
+My references for working on this program are as follows:
+Section 7.2 Reading and Writing Files of the Python Tutorial at https://docs.python.org/3/tutorial/inputoutput.html
 
-the python function for opening a file is `open` and it takes the filename as an argument.
-The second argument describes the way or mode in which the file will be opened.
+Python Tutorial section 10.3 Command Line Arguments https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments
+Also the documentation on the sys module at https://docs.python.org/3/library/sys.html#module-sys
+
+Chapter 17 Exceptions of the PythonBook by Peter Spronk at the http://spronck.net/pythonbook/pythonbook.pdf
 
 To test this I have downloaded the text file version of Moby Dick from the Gutenberg project at http://www.gutenberg.org/ebooks/2489
 (Project Gutenberg  offers thousands of free eBooks in various formats - it was the first provider of ebooks)
-
 This will serve as a test file to see if my script works
+Also created a shorter text file here with line numbers so I can actually tell if every second line is printing
 
 """
-### the suggested way of opening files is using the `with` keyword.
-## The `open()` function is used for opening files. 
-# It takes two parameters, a string containing the filename and a string for the mode
-# here I am opening the file using read-only mode "r", opening the file as moby as I do not want to make any changes to the file
-"""
-with open("moby-dick.txt", "r") as moby
-    # while the block is indented after the `:` read moby and save into m1
-    m1= moby.readline()
- # the file will close automatically. Next print to screen   
-print(m1)
+# Create a text file with line numbers so that I can test my script
 
-## using the `with` keyword to open the text file as file object `f`
-with open("moby-dick.txt","r") as f:
-    # print the first line
-    print(f.readline())
-    
-## using the `with` keyword to open the text file as file object `f`
-with open("moby-dick.txt","r") as f:
-    ## for every line l in the file object f
-    for l in f:
-        # print each line
-        print(l)
-
-Next the question asks for every second line to be output
-I need to find out if there is a skipline function. 
-"""
-# first create a line number variable to give a line number to each line
-# To find every second line, I could try printing every even line number
-# I can use the modulus operator to see if a line number is even
-
-
-## open the file creating file object f
-with open("moby-dick.txt","r") as f:
-    
-    # set up a variable to hold the number of lines
-    line_no = 0
-    print(type(line_no))
-    ## for every line l in the file object f
-    for l in f:
-        ## add 1 to the line_no to keep track of the number of lines so far
-        line_no += 1
-        ## if the line_no is evem (using modulus operator)
-        if (line_no % 2) ==0:
-            ### print the even lines
-          print(l)
-
-        # print each line
-        #print(l)
-        # print the line number
-       
-## 
-# I want to create my own text file with line numbers so that I can test my script
-# for solution-9.py and see if it is outputting every second line
-
-##  create a file object for appending to end of file called f
+#  create a file object to write to called f
 with open("my_testfile.txt","w") as f:
-  ## using a for loop to write 100 lines of text with the line number as i
+  # using a for loop to write 200 lines of text with the line number as i
   for i in range(200):
-    ## I need to make variable i into a string to avoid TypeError: write() argument must be str, not int
-    ## write i as a string so I can get a number on each line
+    # add a line number starting at 0 to 200
+    # convert i to a string to avoid 'TypeError: write() argument must be str, not int'
     f.write(str(i))
     ## write a line of text to the file
     f.write(" This is line number ")
     f.write(str(i))
     f.write(" in my new text file \n")
 
-## Now that I have created a test file with line numbers I can test my script to see if it is outputting every second line
-## open the file creating file object f
-with open("my_testfile.txt","r") as f:
-    
-    # set up a variable to hold the number of lines
-    line_no = 0
-    print(type(line_no))
-    ## for every line l in the file object f
-    for l in f:
-        ## add 1 to the line_no to keep track of the number of lines so far
-        line_no += 1
-        ## if the line_no is evem (using modulus operator)
-        if (line_no % 2) ==0:
-            ### print the even lines
-          print(l)
-        
-## I am sure there is a better way of doing this. I will come back to this and see if I can improve it
-# But for now I will save this.
- 
-# The program should take the filename from an argument on the command line
-# come back to write the function 
-## Referring to the Python Tutorial section 4.6 Defining Functions
-## https://docs.python.org/3/tutorial/controlflow.html#defining-functions
-
-## using keyword `def` to introduce the function definition, followed by the function name `second`  
-# and in parantheses the list of formal parameters, textfile
-def second(textfile):
-# The statements that form the body of the function must be indented
-    ## open the file creating file object f
-    with open(textfile,"r") as f:
-    
-        # set up a variable to hold the number of lines
-        line_no = 0
-        print(type(line_no))
-        ## for every line l in the file object f
-        for l in f:
-            ## add 1 to the line_no to keep track of the number of lines so far
-            line_no += 1
-            ## if the line_no is evem (using modulus operator)
-            if (line_no % 2) ==0:
-                ### print the even lines
-                print(l)
-
-# I have copied my function into a separate python script second.py
-# it is not finished but I will leave it for tonight.
-
-## from the problem set: The program should take the filename from an argument on the command line.
-# As it is, my program 
-"""
-Looking down through the Table of Contents on the Python tutorial 
-[Section 10.3 Command Line Arguments](https://docs.python.org/3.3/tutorial/stdlib.html#command-line-arguments)
-16.4 argparse — Parser for command-line options, arguments and sub-commands
-at https://docs.python.org/3.3/library/argparse.html
-that 
-"""
+# Now that I have created a test file with line numbers I can test my script to see if it is outputting every second line
+# open the file creating file object f
+## first import the sys module
 import sys
-print(sys.argv)
+
+# if the user has not supplied a filename to the program on the command line prompt them to enter a file
+# check if there is an argument entered at the command line. this will be index 1. The program name is an index 0
+# if there is only 1 sys argument, then the user has not entered a file name.
+if len(sys.argv) < 2:
+
+    print("please enter a valid text file for the program to continue")
+
+    try:
+        # using this other file entered after prompt as the file to read if none initially entered on running the program
+        fileAlt = input("please enter a .txt file ")
+
+    except FileNotFoundError:  
+        print("PLEASE ENTER A VALID TXT FILE")
+    except IndexError:  
+        print("INDEX ERROR!")
+    # This 
+    file_to_read = fileAlt
+
+
+else:
+    # can go ahead as the user did enter an argument along with the program name
+    file_to_read = sys.argv[1]
+
+# unless the filename is entered at the time the program is run this will cause an error so need
+# to capture the error before trying to use the expected filename at sys.argv[1]
+
+## using with to open the file, this will automatically close the file afterwards
+with open(file_to_read,"r") as f:
+        # initialise this to count the line numbers
+        line_no = 0
+    # for every line l in the file object f
+        for l in f:
+        # add 1 to the line_no to keep track of the number of lines so far
+            line_no += 1
+        ##if the line_no is even (using modulus operator)
+            if (line_no % 2) ==0:
+            #print the even lines
+                print(l)
+"""
+I will leave this for now. It is doing what it is meant to be doing but I want to be able to handle the 
+case where the file entered is not a valid .txt file. Maybe this is ok as it is as the error message is valid
+'FileNotFoundError: [Errno 2] No such file or directory: '  '
+
+The program is taking a text file if one is entered from the command line at the time of running the program.
+If there is no argument provided with the script name on the command line, then the user is prompted to enter a file name
+This will then be read and processed.
+However I have not yet accounted for a file that is not actually available.
+I will look more into this and return|!
+There is another packages besides the 'sys' package which might be useful. the 'opts' package
+
+
+"""
