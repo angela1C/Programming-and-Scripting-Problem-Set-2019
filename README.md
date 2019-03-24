@@ -9,8 +9,6 @@
 6. solution-7.py to remove extra print statements
 
 
-(For now I am just following the format that Ian went through on the Skype call)
-
 This repository contains my solutions to the Problem Set 2019 for the module Programming and Scripting at GMIT as part of the Higher Diploma in Computing and Data Analytics.
 [Problem Set Instructions]("https://github.com/ianmcloughlin/problems-pands-2019/raw/master/problems.pdf" )
 

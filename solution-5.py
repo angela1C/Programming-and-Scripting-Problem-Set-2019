@@ -50,5 +50,6 @@ else:
         # This else clause executes when the for loop has fallen through without finding any factors between 2 and the number 
         print("That is prime")
 
-# To verify this program was working ok I checked against a selection of prime numbers at https://en.wikipedia.org/wiki/List_of_prime_numbers#The_first_1000_prime_numbers     
+# To verify this program was working ok I checked against a selection of prime numbers 
+# at https://en.wikipedia.org/wiki/List_of_prime_numbers#The_first_1000_prime_numbers     
 

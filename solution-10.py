@@ -1,8 +1,10 @@
 """
 # Solution-10.py
+# Angela Carpenter 
+# 23 March 2019
+
 # This program displays a plot of the functions x, x^2 and 2^x in the range [0, 4].
 # Angela Carpenter 23 March 2019
-this question asks for a plot so I presume it means a single plot with the different lines.
 
 Matplotlib is a plotting library for Python. It is not part of the standard library so first needs to be installed.
 see https://matplotlib.org/users/installing.html
