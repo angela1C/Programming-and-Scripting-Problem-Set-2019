@@ -10,6 +10,7 @@
 
 
 This repository contains my solutions to the Problem Set 2019 for the module Programming and Scripting at GMIT as part of the Higher Diploma in Computing and Data Analytics.
+The pdf file containing the problem set instructions is available at:
 [Problem Set Instructions](https://github.com/ianmcloughlin/problems-pands-2019/raw/master/problems.pdf)
 
 ## How to download this repository.
