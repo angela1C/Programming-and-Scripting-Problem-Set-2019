@@ -42,12 +42,13 @@ else:
     for n in range(2,x): 
         # Using the modulus % operator check if that number is evenly divisible by n, in which case the number has a factor besides itself and 1
         if x % n ==0: 
-            print(n, "is a factor of ",x, "so it is not prime")
+            #print(n, "is a factor of ",x, "so it is not prime")
+            print("That is not prime")
             # break to end the for loop as there is no need to check for any other factors once the first factor is found 
             break  
     else:  
         # This else clause executes when the for loop has fallen through without finding any factors between 2 and the number 
-        print(x, "That is prime")
+        print("That is prime")
 
 # To verify this program was working ok I checked against a selection of prime numbers at https://en.wikipedia.org/wiki/List_of_prime_numbers#The_first_1000_prime_numbers     
 

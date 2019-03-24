@@ -1,7 +1,7 @@
 """
 # Solution to Problem 4 on the Problem Set 2019
 # Angela Carpenter
-# 23 March 2019
+# 24 March 2019
 
 This program asks the user to input a positive integer as x. It outputs a sequence of numbers starting with that number x as the first term. 
 The rest of the terms in the sequence are calculated from the previous terms by halving the previous term if it was even 
@@ -34,31 +34,32 @@ while True:
         # if there is a ValueError (either a non-integer or a negative integer) then print the following message
         print("That was not a positive integer. Please try again!")
 
-## Once a valid integer has been entered, print x. This will be the first term in the sequence.
-print(x)
-
-
 ## create num_terms variable to count the number of terms in the sequence. At each step increase its value by 1. can check the output against the Wikipedia page
 num_terms = 1
+# create a list to hold the sequence. x will be the only element to start
+my_seq =[x]
 ## While x is greater than 1, execute the statements in this while loop
 while  x > 1:
     # check if current value of x is even and if it is even, divide x by 2 and update x to be this value
     if x % 2 == 0:  
         x = x //2
-        ## print the result of this as the next term in the sequence 
-        print(x) 
+        # append x to the my_seq list as the next term in the sequence (instead of printing the term)
+        my_seq.append(x)
         ## increment the term counter variable by 1
         num_terms += 1
         
 ## however if the current value of x is odd, multiply x by 3 and then add 1 to this product. Update x to be this 
     else:
         x = (x * 3) + 1
-        # print the result of this as the next term in the sequence
-        print(x)
+        # print(x)
+        # append x to the my_seq list as the next term in the sequence (instead of printing the term)
+        my_seq.append(x)
         # increment the term counter variable by 1
         num_terms +=1
       
-print("The number of terms in the sequence is ",num_terms)
+#print("The number of terms in the sequence is ",num_terms)
 
-# come back later to this and get the sequence onto one line as per the sample output   
-    
+print(*my_seq, sep = ", ")
+# as per stackoverflow post (https://stackoverflow.com/a/35119046) the star * unpacks the list 
+# and returns every element in the list without the brackets
+ 

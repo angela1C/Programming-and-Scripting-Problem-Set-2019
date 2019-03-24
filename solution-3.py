@@ -1,6 +1,8 @@
 """
 # Solution to problem 3 on the Problem Set 2019
-# Angela Carpenter 23 March 2019
+# Angela Carpenter
+# 23 March 2019
+
 # This program prints all numbers between 1,000 and 10,000 that are divisible by 6 but are not divisible by 12.
 
 This program goes through all of the integers between 1000 and 10000.

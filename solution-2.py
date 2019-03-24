@@ -1,5 +1,8 @@
 """
 # Solution to problem 2 on the Problem Set 2019
+# Angela Carpenter
+# 24th March 2019
+
 # This program outputs whether or not today is a day that begins with the letter T. 
 
 For this I referred to the sections on the `datetime` module in the Python Standard Library and the Python Tutorial, both at https://docs.python.org

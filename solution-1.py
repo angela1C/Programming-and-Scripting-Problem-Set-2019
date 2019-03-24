@@ -1,6 +1,7 @@
 # Solution to problem 1 on the Problem Set 2019
 # This program asks the user to input any positive integer and outputs the sum of all numbers between one and that number
-# Angela Carpenter 23rd March 2019
+# Angela Carpenter 
+# 23rd March 2019
 
 # tidying it up. removing excess comments. avoiding duplication with the readme file
 # I am not sure if I need to have the script saved as a particular name such as sumopto.py in the sample output

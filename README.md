@@ -3,14 +3,16 @@
 ## COME BACK TO TIDY UP AND FINISH OFF!.
 1. remove extra print statements or extra statements used for testing
 2. remove test files and scripts
-3. revisit solution-4.py to get output on a single line
-4. and solution-9.py to deal with invalid files
+3. revisit solution-4.py to get output on a single line - done
+4. solution-9.py to deal with invalid files
+5. solution-8.py to replace if-else for the date suffix with format strings
+6. solution-7.py to remove extra print statements
 
 
 (For now I am just following the format that Ian went through on the Skype call)
 
 This repository contains my solutions to the Problem Set 2019 for the module Programming and Scripting at GMIT as part of the Higher Diploma in Computing and Data Analytics.
-[See here for the instructions]("put in link to github.com/ian..." )
+[Problem Set Instructions]("https://github.com/ianmcloughlin/problems-pands-2019/raw/master/problems.pdf" )
 
 ## How to download this repository.
 
@@ -18,18 +20,42 @@ This repository contains my solutions to the Problem Set 2019 for the module Pro
 2. Click the download button
 
 ## How to run the code
-Below are the instructions for running each program.
+Make sure you have python 3 installed. 
+If not go to https://www.python.org/downloads/ and follow the instructions.
 
+The instructions for running each program are below under the program name.
+In general, first navigate to the folder containing the file.
 
-
-## What each file contains
+At the command line enter `python <program_name>`
+for example: $ python solution-1.py
+Follow any instructions that are printed to the screen.
 
 ## References
-I have used the online documentation at the Python.org website for this project.
-In particular, The Python Tutorial has been my main reference point for learning the basics about the Python language. [The Python Tutorial](https://docs.python.org/3/tutorial/)
-It is available at the python.org websites at https://docs.python.org/3/tutorial/. 
-I have also referred to The Python Standard Library quite a bit following the links from The Python Tutorial.
-In addition I have looked to the PythonBook by Peter Spronk at http://spronck.net/pythonbook/pythonbook.pdf.
+I have mainly used the online documentation at the Python.org website as my reference point for this project.  In particular, The Python Tutorial for learning the basics about the Python language and for code examples. 
+
+[The Python Tutorial](https://docs.python.org/3/tutorial/)  
+Also The Python Standard Library by following the links from The Python Tutorial. 
+
+[The Python Standard Library](https://docs.python.org/3/library/index.html) 
+
+In addition I have being reading through the "The Coder's Apprentice: Learning Programming with Python" by Pieter Spronck at http://spronck.net/pythonbook/pythonbook.pdf. This book has been very useful.
+
+[matplotlib documentaion](https://matplotlib.org/tutorials/introductory/pyplot.html)
+
+Also I did an internet search for certain mathematical terms (including Collatz Conjecture, Prime Numbers, Newton's Method) that came up during this assignment to make sure I was using them correctly and for testing my code.
+
+For this I found Wikipedia's wikis useful as well as other sources below.
+Wikipedia at
+https://en.wikipedia.org/wiki/Collatz_conjecture for solution-4.py
+https://en.wikipedia.org/wiki/List_of_prime_numbers#The_first_1000_prime_numbers for solution-5.py
+https://en.wikipedia.org/wiki/Newton%27s_method for solution-7.py
+https://math.stackexchange.com/questions/350740/why-does-newtons-method-work
+https://mathinsight.org/newtons_method_refresher
+
+
+
+
+
 
 ## Solution-1.py
 This program contains my code for the first problem on the problem set.
