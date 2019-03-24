@@ -3,7 +3,7 @@
 # Angela Carpenter
 # 23 March 2019
 
-This program outputs today's date and time in a particular format.
+This program outputs today's date and time in a the format "Monday, January 10th 2019 at 1:15pm”
 
 My references for working on this problem are the documentation at the Python Standard Library at https://docs.python.org
 [python library datetime module](https://docs.python.org/3/library/datetime.html#module-datetime)
