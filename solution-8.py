@@ -45,7 +45,4 @@ elif int(day) == 23:
 # Splitting the date and time into two parts, adding the suf variable in between by concatenating using the + operator, make lowercase
 print(now.strftime("%A, %B %d")+suf, now.strftime("%Y at %I:%M%p").lower())
 
-## it works!
-# come back and try the format strings instead of the if-else above for the suffix
-
 

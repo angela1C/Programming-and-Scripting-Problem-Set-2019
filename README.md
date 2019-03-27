@@ -1,12 +1,10 @@
 # Problems sets solutions
 
 ## COME BACK TO TIDY UP AND FINISH OFF!.
-1. remove extra print statements or extra statements used for testing
+1. remove extra statements used for testing in solution-9.py, also .txt files created for testing
 2. remove test files and scripts
-3. revisit solution-4.py to get output on a single line - done
 4. solution-9.py to deal with invalid files
-5. solution-8.py to replace if-else for the date suffix with format strings
-6. solution-7.py to remove extra print statements
+
 
 
 This repository contains my solutions to the Problem Set 2019 for the module Programming and Scripting at GMIT as part of the Higher Diploma in Computing and Data Analytics.
