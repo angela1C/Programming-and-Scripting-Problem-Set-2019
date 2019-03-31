@@ -1,56 +1,46 @@
 # Problems sets solutions
 
-## COME BACK TO TIDY UP AND FINISH OFF!.
-1. remove extra statements used for testing in solution-9.py, also .txt files created for testing
-2. remove test files and scripts
-4. solution-9.py to deal with invalid files
-
-
-
 This repository contains my solutions to the Problem Set 2019 for the module Programming and Scripting at GMIT as part of the Higher Diploma in Computing and Data Analytics.
 The pdf file containing the problem set instructions is available at:
-[Problem Set Instructions](https://github.com/ianmcloughlin/problems-pands-2019/raw/master/problems.pdf)
+[Problem Set 2019](https://github.com/ianmcloughlin/problems-pands-2019/raw/master/problems.pdf)
 
 ## How to download this repository.
 
-1. Go to GitHub
-2. Click the download button
+1. Go to the URL for the repository on GitHub at https://github.com/angela1C/pands-problem-set
+2. Click the green `Clone or download` button.
 
 ## How to run the code
-Make sure you have python 3 installed. 
+Make sure you have `Python 3` installed. 
 If not go to https://www.python.org/downloads/ and follow the instructions.
 
-The instructions for running each program are below under the program name.
-In general, first navigate to the folder containing the file.
+The instructions for running each program are listed below. 
+There are ten python programs, one for each of the questions on the problem set. Each program is entitled `solution-x.py` with the number indicating which question the python program pertains to. For example, `solution-1.py` is the program solution for `Question 1` on the problem set.
+
+To run each python program, first navigate to the folder downloaded from this repository. 
 
 At the command line enter `python <program_name>`
 for example: $ python solution-1.py
 Follow any instructions that are printed to the screen.
 
 ## References
-I have mainly used the online documentation at the Python.org website as my reference point for this project.  In particular, The Python Tutorial for learning the basics about the Python language and for code examples. 
 
-[The Python Tutorial](https://docs.python.org/3/tutorial/)  
-Also The Python Standard Library by following the links from The Python Tutorial. 
+The online documentation provided at the Python.org website has been my main reference point for this project.  
+In particular, [The Python Tutorial](https://docs.python.org/3/tutorial/) for learning the basics about the Python language and for some code examples of the various concepts but also [The Python Standard Library](https://docs.python.org/3/library/index.html) for more details.
 
-[The Python Standard Library](https://docs.python.org/3/library/index.html) 
-
-In addition I have being reading through the "The Coder's Apprentice: Learning Programming with Python" by Pieter Spronck at http://spronck.net/pythonbook/pythonbook.pdf. This book has been very useful.
+ "The Coder's Apprentice: Learning Programming with Python" by Pieter Spronck at http://spronck.net/pythonbook/pythonbook.pdf. This book has also been very helpful for learning python programming.
 
 [matplotlib documentaion](https://matplotlib.org/tutorials/introductory/pyplot.html)
 
-Also I did an internet search for certain mathematical terms (including Collatz Conjecture, Prime Numbers, Newton's Method) that came up during this assignment to make sure I was using them correctly and for testing my code.
+I did various internet searches for some of the mathematical terms that arose in this assignment such as The Collatz Conjecture, Prime Numbers, Newton's Method etc to ensure I was applying the terms correctly and also for testing the results of running my code.
 
-For this I found Wikipedia's wikis useful as well as other sources below.
-Wikipedia at
+For this I found Wikipedia's wikis quite useful plus [StackExchange.com](https://stackexchange.com) and [Mathsinsight.org](https://mathinsight.org).
+
+
 https://en.wikipedia.org/wiki/Collatz_conjecture for solution-4.py
 https://en.wikipedia.org/wiki/List_of_prime_numbers#The_first_1000_prime_numbers for solution-5.py
 https://en.wikipedia.org/wiki/Newton%27s_method for solution-7.py
-https://math.stackexchange.com/questions/350740/why-does-newtons-method-work
-https://mathinsight.org/newtons_method_refresher
-
-
-
+https://math.stackexchange.com/questions/350740/why-does-newtons-method-work for solution-7.py
+https://mathinsight.org/newtons_method_refresher for solution-7.py
 
 
 
@@ -152,6 +142,8 @@ The program takes the filename from an argument on the command line
 To run this program, go to the command line and enter the following command:
 $ python solution-9.py `<file.txt>`
 
+Note if the text file is not in the same directory as `solution-9.py` then you should provide the full path to the file.
+
 
 ## Solution-10.py
 
@@ -163,4 +155,5 @@ To run this program, go to the command line and enter the following command:
 $ python solution-10.py
 
 The program will generate the plot of the three functions. 
+
 Note to return to the command line you must first close out of the resulting plot. 

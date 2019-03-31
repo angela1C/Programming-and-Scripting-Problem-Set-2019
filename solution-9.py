@@ -1,11 +1,11 @@
 """
 # Solution to Problem 9 on the Problem Set 2019
 # Angela Carpenter
-# 24th March 2019
+# 31st March 2019
 
 This program reads in a text file and outputs every second line. 
 The program takes the filename of the text file from an argument on the command line.
-If the user has not entered a .txt file on the command prompt then they are asked to enter one
+If the user has not entered a .txt file on the command prompt then they are asked to enter one.
 This is then used as the file to process.
 
 My references for working on this program are as follows:
@@ -19,7 +19,7 @@ Chapter 17 Exceptions of the PythonBook by Peter Spronk at the http://spronck.ne
 To test this I have downloaded the text file version of Moby Dick from the Gutenberg project at http://www.gutenberg.org/ebooks/2489
 (Project Gutenberg  offers thousands of free eBooks in various formats - it was the first provider of ebooks)
 This will serve as a test file to see if my script works
-Also created a shorter text file here with line numbers so I can actually tell if every second line is printing
+I also created a shorter text file here with line numbers so I can actually tell if every second line is printing.
 
 """
 # Create a text file with line numbers so that I can test my script
@@ -44,52 +44,49 @@ import sys
 # if the user has not supplied a filename to the program on the command line prompt them to enter a file
 # check if there is an argument entered at the command line. this will be index 1. The program name is an index 0
 # if there is only 1 sys argument, then the user has not entered a file name.
+# The program needs exactly one .txt file so the length of sys.argvs should be  exactly 2
+
+import sys
+
+# if the user has not supplied a filename to the program on the command line prompt them to enter a file
+# check if there is an argument entered at the command line. this will be index 1. The program name is an index 0
+
 if len(sys.argv) < 2:
 
-    print("please enter a valid text file for the program to continue")
+    #print("Please enter a valid text file for the program to continue ")
+    # ask the user to input a valid text file to continue
+    file_to_read = input("please enter a valid .txt file to continue ")
 
-    try:
-        # using this other file entered after prompt as the file to read if none initially entered on running the program
-        fileAlt = input("please enter a .txt file ")
-
-    except FileNotFoundError:  
-        print("PLEASE ENTER A VALID TXT FILE")
-    except IndexError:  
-        print("INDEX ERROR!")
-    # This 
-    file_to_read = fileAlt
-
-
+# if the user has entered more than 2 arguments along with the program name:
+elif len(sys.argv) > 2:
+    # print this message
+    print(f"You have entered {len(sys.argv)} arguments. Please try again with a single .txt file")
+#   Then ask the user to input a valid text file to continue
+    file_to_read = input("To continue please enter a single valid .txt file ")
+# if the user has input a single argument along with the program name then can proceed with the program    
 else:
-    # can go ahead as the user did enter an argument along with the program name
+    # the file to be processed will be the filename entered on running the program
     file_to_read = sys.argv[1]
+print(f"the file to read is {file_to_read}")
 
-# unless the filename is entered at the time the program is run this will cause an error so need
-# to capture the error before trying to use the expected filename at sys.argv[1]
+# after the above block of code, there should be a file_to_read ready for processing.
 
-## using with to open the file, this will automatically close the file afterwards
-with open(file_to_read,"r") as f:
-        # initialise this to count the line numbers
-        line_no = 0
-    # for every line l in the file object f
-        for l in f:
-        # add 1 to the line_no to keep track of the number of lines so far
-            line_no += 1
-        ##if the line_no is even (using modulus operator)
-            if (line_no % 2) ==0:
-            #print the even lines
-                print(l)
-"""
-I will leave this for now. It is doing what it is meant to be doing but I want to be able to handle the 
-case where the file entered is not a valid .txt file. Maybe this is ok as it is as the error message is valid
-'FileNotFoundError: [Errno 2] No such file or directory: '  '
+# using try except statements to print a proper message if the file inout is not a valid file.
+try:
 
-The program is taking a text file if one is entered from the command line at the time of running the program.
-If there is no argument provided with the script name on the command line, then the user is prompted to enter a file name
-This will then be read and processed.
-However I have not yet accounted for a file that is not actually available.
-I will look more into this and return|!
-There is another packages besides the 'sys' package which might be useful. the 'opts' package
+    # open the file to read and execute the indented statements. 
+    with open(file_to_read,"r") as f:
 
-
-"""
+            line_no = 0
+    ## for every line l in the file object f
+            for l in f:
+        ## add 1 to the line_no to keep track of the number of lines so far
+                line_no += 1
+        ## if the line_no is evem (using modulus operator)
+                if (line_no % 2) ==0:
+            ### print the even lines
+                    print(l)
+                    
+ # print exception error if the file is not valid                   
+except FileNotFoundError:
+    print("That is not a valid file. The program cannot continue")

@@ -28,7 +28,7 @@ while True:
         if x < 0:
             ## raise a ValueError if the input is a negative number. This will be the right type but an inappropriate value
            raise ValueError
-         # break out of the loop, otherwise it will keep asking for input for ever!
+         # break out of the loop, otherwise it will keep asking for input for ever
         break  
     ## if an exception does occur within the try clause, then skip the rest of the try statements and go to the except statements.
     except ValueError:
