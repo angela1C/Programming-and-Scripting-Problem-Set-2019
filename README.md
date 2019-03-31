@@ -240,7 +240,7 @@ followed by year %y followed by "at" then time using 12 hour clock %I and %p for
 ## Solution-9.py
 This program contains my code for the ninth problem on the problem set.
 This program reads in a text file and outputs every second line. 
-The program takes the filename from an argument on the command line
+The program takes the filename from an argument on the command line.
 
 To run this program, go to the command line and enter the following command:
 `$ python solution-9.py <file.txt>` 
@@ -260,6 +260,7 @@ My references for working on this program are as follows:
 To test this I downloaded the text file version of Moby Dick from the Gutenberg project at http://www.gutenberg.org/ebooks/2489
 (Project Gutenberg  offers thousands of free eBooks in various formats - it was the first provider of ebooks)
 I also created a shorter text file with line numbers so I could actually tell if every second line is printing.
+If the file entered was invalid, a `try - exception` was used to alert the user that the file was invalid.
 
 
 ## Solution-10.py
@@ -279,3 +280,6 @@ Matplotlib is a plotting library for Python. It is not part of the standard libr
 see https://matplotlib.org/users/installing.html
 
 For this problem I referred to the tutorial at https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py.
+
+This program used a `numpy` array to create a range to use. 
+

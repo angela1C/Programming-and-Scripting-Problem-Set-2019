@@ -1,17 +1,16 @@
-"""
 # Solution-10.py
+# This is my solution to Problem 9 on the Problem Set 2019.
 # Angela Carpenter 
-# 23 March 2019
+# 31st March 2019
 
 # This program displays a plot of the functions x, x^2 and 2^x in the range [0, 4].
-# Angela Carpenter 23 March 2019
 
-Matplotlib is a plotting library for Python. It is not part of the standard library so first needs to be installed.
-see https://matplotlib.org/users/installing.html
+# Matplotlib is a plotting library for Python. It is not part of the standard library so first needs to be installed.
+# see https://matplotlib.org/users/installing.html
 
-For this problem I referred to the tutorial at https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py
+# For this problem I referred to the tutorial at https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py
 
-"""
+
 ## create y as a function of x. 
 # y = x^2
 # y = 2^x
