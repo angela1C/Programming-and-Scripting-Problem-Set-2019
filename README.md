@@ -51,12 +51,19 @@ outputs the sum of all numbers between one and that number.
 
 To run this program, go to the command line and enter the following command:
 $ python solution-1.py
-The program will ask the user to input a postive integer.
-The program will output a positive integer containing the sum of all numbers betweem 1 and the number entered  by the user.
+The program will ask the user to input a positive integer.
+The program will output a positive integer containing the sum of all numbers between 1 and the number entered  by the user.
+
+The input can be any positive integer. If the user inputs something other than this an error message is printed until a positive integer is entered.
+For this I referred to the Python Tutorial - [Section 8.3 Handling Exceptions](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) 
+and [The Python Standard Library Documentation](https://docs.python.org/3/library/exceptions.html#ValueError)
+I also referred to Chapter 17 Exceptions of the PythonBook by Peter Spronk at the http://spronck.net/pythonbook/pythonbook.pdf
+A `ValueError` is raised to capture a negative integer being input.
+
 
 ## Solution-2.py
 
-This program contains my code for the second problem on the problem set.
+This program contains my code for the second problem on the problem set.  
 2. "Write a program that outputs whether or not today is a day that begins with the letter T. 
 
 To run this program, enter the following command on the command line:
@@ -66,16 +73,38 @@ The program does not require any input from the user.
 The program will output a message saying if today begins with a T or not.
 "Yes - Today begins with a T" or "No - today does not begin with a T"
 
+For this problem I referred to the sections on the `datetime` module in the Python Standard Library and the Python Tutorial, both at https://docs.python.org.
+[python library datetime module](https://docs.python.org/3/library/datetime.html#module-datetime) and https://docs.python.org/3/library/datetime.html#date-objects
+The Python Tutorial also gives a brief introduction in section 10.8 to Dates and Times [Section 10.8 Dates and Times](https://docs.python.org/3/tutorial/stdlib.html#dates-and-times)
+
+For this program to run, it takes as input the actual day of the week when the program is run. The `datetime` module, part of the Python Standard Library, can do this. The `date` object of `datetime` is used here and it's class method `date.today()` is used to get today's date - the date when the program is actually run.
+The program requires only the first letter of the day returned from the `date`. It extracts a substring containing the first element of the day name.
+The `date` object has a method `strftime` that will return a string representing the date according to a format string that is explicitly specified `date.strftime(format)`. 
+The program then checks if the first letter is equal to "T" or not and prints the appropriate message.
+
+
 ## Solution-3.py
 
-This program contains my code for the third problem on the problem set.
+This program contains my code for the third problem on the problem set.  
+
 3. Write a program that prints all numbers between 1,000 and 10,000 that are divisible by 6 but not 12.
 
 To run this program, enter the following command on the command line:
 $ python solution-3.py
 
 The program does not require any input from the user.
-The program will print all the numbers betweem 1,000 and 10,000 that are divisible by 6 but are not divisible by 12. Any numbers between 1,000 and 10,000 that are divisible by both 6 and 12 are not printed
+
+For writing this program, I referred to [Section 4.2 for Statement](https://docs.python.org/3/tutorial/controlflow.html?highlight=range#for-statements) and [section 4.3. The Range() Function](https://docs.python.org/3/tutorial/controlflow.html?highlight=range#for-statements)
+of the Python Tutorial.
+
+A `for`  loop is used to iterate through every number in a sequence of numbers in the order they appear in the sequence.
+The `range()` function generates a sequence of numbers that can be iterated over in the for loop.
+
+The program will print all the numbers between 1,000 and 10,000 that are divisible by 6 but are not divisible by 12. Any numbers between 1,000 and 10,000 that are divisible by both 6 and 12 are not printed.
+
+This program goes through all of the integers between 1000 and 10000. For each number it first checks if it is divisible by 6 and if it is, then it checks if the number is not divisible by 12.
+If the number is divisible by 6 and is also not divisible by 12 then this number is printed.
+However if the number is divisible by 6 and is also divisible by 12 then this number is not printed.
 
 ## Solution-4.py
 
