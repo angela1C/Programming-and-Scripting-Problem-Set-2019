@@ -1,4 +1,5 @@
-# Solution to problem 2 on the Problem Set 2019
+# solution-2.py
+# This is my solution to problem 2 on the Problem Set 2019.
 # Angela Carpenter
 # 31st March 2019
 
