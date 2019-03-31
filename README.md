@@ -55,8 +55,10 @@ The program will ask the user to input a positive integer.
 The program will output a positive integer containing the sum of all numbers between 1 and the number entered  by the user.
 
 The input can be any positive integer. If the user inputs something other than this an error message is printed until a positive integer is entered.  
-For this I referred to the Python Tutorial - [Section 8.3 Handling Exceptions](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) 
-and [The Python Standard Library Documentation](https://docs.python.org/3/library/exceptions.html#ValueError).  
+For this I referred to the Python Tutorial - 
+- [Section 8.3 Handling Exceptions](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) 
+- [The Python Standard Library Documentation](https://docs.python.org/3/library/exceptions.html#ValueError).  
+
 I also referred to Chapter 17 Exceptions of the PythonBook by Peter Spronk at the http://spronck.net/pythonbook/pythonbook.pdf.   
 A `ValueError` is raised to capture a negative integer being input.
 
@@ -74,8 +76,11 @@ The program will output a message saying if today begins with a T or not.
 "Yes - Today begins with a T" or "No - today does not begin with a T"
 
 For this problem I referred to the sections on the `datetime` module in the Python Standard Library and the Python Tutorial, both at https://docs.python.org.
-[python library datetime module](https://docs.python.org/3/library/datetime.html#module-datetime) and https://docs.python.org/3/library/datetime.html#date-objects.  
-The Python Tutorial also gives a brief introduction in section 10.8 to Dates and Times [Section 10.8 Dates and Times](https://docs.python.org/3/tutorial/stdlib.html#dates-and-times).
+- [python library datetime module](https://docs.python.org/3/library/datetime.html#module-datetime) and 
+- https://docs.python.org/3/library/datetime.html#date-objects.  
+
+The Python Tutorial also gives a brief introduction in section 10.8 to Dates and Times 
+- [Section 10.8 Dates and Times](https://docs.python.org/3/tutorial/stdlib.html#dates-and-times).
 
 For this program to run, it takes as input the actual day of the week when the program is run. The `datetime` module, part of the Python Standard Library, can do this. The `date` object of `datetime` is used here and it's class method `date.today()` is used to get today's date - the date when the program is actually run.
 The program requires only the first letter of the day returned from the `date`. It extracts a substring containing the first element of the day name.
@@ -94,7 +99,9 @@ To run this program, enter the following command on the command line:
 
 The program does not require any input from the user.
 
-For writing this program, I referred to [Section 4.2 for Statement](https://docs.python.org/3/tutorial/controlflow.html?highlight=range#for-statements) and [section 4.3. The Range() Function](https://docs.python.org/3/tutorial/controlflow.html?highlight=range#for-statements)
+For writing this program, I referred to 
+- [Section 4.2 for Statement](https://docs.python.org/3/tutorial/controlflow.html?highlight=range#for-statements) and 
+- [section 4.3. The Range() Function](https://docs.python.org/3/tutorial/controlflow.html?highlight=range#for-statements)
 of the Python Tutorial.
 
 A `for`  loop is used to iterate through every number in a sequence of numbers in the order they appear in the sequence.
@@ -153,7 +160,7 @@ To determine if a number greater than 1 is a prime number check if it can be div
 
 My references for working on this problem are as follows:
 
-[Python Tutorial  - Section 4.4 break and continue Statements, and else Clauses on Loops](https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops). 
+- [Python Tutorial  - Section 4.4 break and continue Statements, and else Clauses on Loops](https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops).  
 The example in section 4.4 was my starting point for writing the code for this program. 
 
 To verify this program was working ok I checked against a selection of prime numbers at https://en.wikipedia.org/wiki/List_of_prime_numbers#The_first_1000_prime_numbers. 
@@ -173,22 +180,40 @@ It takes a string input by the user, then splits the string into words. A word h
 Go through the list of words but only print every second one.
 It does so using indexing to go through each word in the list of words starting from the very first word, ending at the very last word, using a step size of 2 to get every second word. It then concatenate every second word in other_word with whitespace using the `str.join()` method.
 
-My references for working on this problem are as follows:
-[Section 3.1.2 of The Python Tutorial](https://docs.python.org/3/tutorial/introduction.html#strings)
-[String Methods in the Python Standard Library](https://docs.python.org/3/library/stdtypes.html#string-methods)
+I referred to the Python documentation for working on this problem:
+- [Section 3.1.2 of The Python Tutorial](https://docs.python.org/3/tutorial/introduction.html#strings)
+- [String Methods in the Python Standard Library](https://docs.python.org/3/library/stdtypes.html#string-methods)
 In particular:
-[str.split()](https://docs.python.org/3/library/stdtypes.html#str.split) and [str.join](https://docs.python.org/3/library/stdtypes.html#str.join)
+- [str.split()](https://docs.python.org/3/library/stdtypes.html#str.split) and [str.join](https://docs.python.org/3/library/stdtypes.html#str.join)
 
 ## Solution-7.py
 
 This program contains my code for the seventh problem on the problem set.
 
 To run this program, go to the command line and enter the following command:
-$python solution-7.py
+`$python solution-7.py`
 
-The program will ask the user to enter a positive floating point number.
-The program will output the approximate square root of the number.
+This program asks the user to input a positive floating point number. It then outputs an approximation of its square root.
 
+There is a Python function for calculating square roots in the `maths` module which is part of the Python Standard Library.
+[module-math](https://docs.python.org/3/library/math.html?highlight=math#module-math).
+
+I referred again to various Python documentation in the Python Standard Library and The Python Tutorial:
+
+- [format function](https://docs.python.org/3/library/functions.html#format) for the format function.
+- [Python Tutorial - Formatted String Literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals)
+- [math module](https://docs.python.org/3/library/math.html?highlight=math#module-math) for the `sqrt` function
+
+Newtons Method can also be used to get an estimate of the square root of a number. I referred to the following sources for information on this method.
+
+- https://en.wikipedia.org/wiki/Newton%27s_method  
+- https://math.stackexchange.com/questions/350740/why-does-newtons-method-work  
+- https://mathinsight.org/newtons_method_refresher  
+
+Using Newtons Method, regardless of the starting estimate, once the square of the estimate gets close enough (I used 0.01 for this program) to the actual number itself, then that is a good approximation for the square root. 
+An intial estimate is used for the square root. This can be any number to start the loop going as the `while` loop will keep changing the estimate until it is close enough, here within 0.01. 
+
+The code using Newtons Method in this program is adapted from  [A Tour of Go](https://tour.golang.org/flowcomtrol/8).
 
 
 ## Solution-8.py
@@ -196,8 +221,21 @@ This program contains my code for the eight problem on the problem set.
 
 This program outputs today's date and time in a the format "Monday, January 10th 2019 at 1:15pm”
 
-To run this program, go to the command line and enter the following command:
-$ python solution-8.py
+To run this program, go to the command line and enter the following command:  
+`$ python solution-8.py`  
+
+My references for working on this problem are as follows:
+- [python library datetime module](https://docs.python.org/3/library/datetime.html#module-datetime). Particularly the section [strftime() and strptime() Behaviour](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior).  
+The Python Tutorial also gives a brief introduction to Dates and Times:
+- [Section 10.8 Dates and Times](https://docs.python.org/3/tutorial/stdlib.html#dates-and-times)
+- Chapter 27 of the Pythonbook.pdf by Peter Sprock at http://spronck.net/pythonbook/pythonbook.pdf
+
+The program takes the current time and date on your computer at the time the program is run.
+It creates a string containing time and date elements in the required format and prints it.
+The required format is:
+A weekday name, followed by a comma "," then full version of month name followed by the day of month with a suffix for 'th' or 'nd' or 'st'
+Then the 4 digit year, followed by the string "at" followed by 24 hour digital clock time with "am" or "pm" at the very end.
+followed by year %y followed by "at" then time using 12 hour clock %I and %p for the suffix of am or pm
 
 ## Solution-9.py
 This program contains my code for the ninth problem on the problem set.
@@ -205,9 +243,23 @@ This program reads in a text file and outputs every second line.
 The program takes the filename from an argument on the command line
 
 To run this program, go to the command line and enter the following command:
-$ python solution-9.py `<file.txt>`
+`$ python solution-9.py <file.txt>` 
 
 Note if the text file is not in the same directory as `solution-9.py` then you should provide the full path to the file.
+
+If the user has not entered a .txt file on the command prompt then they are asked to enter one.
+This is then used as the file to process.
+
+My references for working on this program are as follows:
+- [Section 7.2 Reading and Writing Files of the Python Tutorial](https://docs.python.org/3/tutorial/inputoutput.html)
+- [Python Tutorial section 10.3 Command Line Arguments](https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments)
+- [Python Library Sys Module](https://docs.python.org/3/library/sys.html#module-sys)
+
+- Chapter 17 Exceptions of the PythonBook by Peter Spronk at the http://spronck.net/pythonbook/pythonbook.pdf
+
+To test this I downloaded the text file version of Moby Dick from the Gutenberg project at http://www.gutenberg.org/ebooks/2489
+(Project Gutenberg  offers thousands of free eBooks in various formats - it was the first provider of ebooks)
+I also created a shorter text file with line numbers so I could actually tell if every second line is printing.
 
 
 ## Solution-10.py
@@ -217,8 +269,13 @@ This program contains my code for the tenth problem on the problem set.
 10. Write a program that displays a plot of the functions x, x^2 and 2^x in the range[0,4]
 
 To run this program, go to the command line and enter the following command:
-$ python solution-10.py
+`$ python solution-10.py`
 
 The program will generate the plot of the three functions. 
 
 Note to return to the command line you must first close out of the resulting plot. 
+
+Matplotlib is a plotting library for Python. It is not part of the standard library so first needs to be installed.
+see https://matplotlib.org/users/installing.html
+
+For this problem I referred to the tutorial at https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py.
